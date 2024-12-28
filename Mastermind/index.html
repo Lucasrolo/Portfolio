@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Secret Code</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="game.js" defer></script>
+</head>
+<body>
+<div class="container">
+  <div class="left-column">
+    
+    <h2 id ="title">The Secret Code</h2>
+      <p>Bienvenido al Juego del código secreto. El objetivo del juego es adivinar el código secreto oculto detrás de las burbujas de colores. Aquí tienes las reglas básicas para jugar:</p>
+      <ol>
+        <li>El juego consiste en adivinar una secuencia de colores.</li>
+        <li>Selecciona los colores haciendo clic en los botones de colores.</li>
+        <li>Después de seleccionar los colores, haz clic en el botón "Validar" para ver los resultados.</li>
+        <li>Los puntos de validación te indicarán cuántos colores seleccionados están en la posición correcta (Exactos) y cuántos colores seleccionados están en la secuencia pero en una posición diferente (Parciales).</li>
+        <li>Intenta adivinar el código secreto en el menor tiempo posible.</li>
+        <li>¡Diviértete jugando!</li>
+      </ol>
+        <div class="tr">
+      
+          <div class="validation">
+            <div class="bubble_valid" id="black"></div>
+            <div class="bubble_valid" id="black"></div>
+            <div class="bubble_valid" id="grey"></div>
+            <div class="bubble_valid"></div>
+          </div>
+          <button class="circle_try" id="1"></button>
+          <button class="circle_try" id="2"></button>
+          <button class="circle_try" id="3"></button>
+          <button class="circle_try" id="4"></button>
+  
+      </div>
+      <p>En este ejemplo, hemos obtenido 2 colores exactos (en la posición correcta) y 1 colore parcial (en una posición diferente).</p>
+
+  </div>
+
+  <div class="right-column">
+    <div class="controls">
+      <button id="startButton">Start</button>
+      <div class="stats">
+        <div class="timer">time: 0 sec</div>
+      </div>
+      <div id="results"></div>
+      <div id="gameOverMessage"></div>
+    </div>
+
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalMessage"></p>
+        <button id="retryButton">Retry</button>
+      </div>
+    </div>
+    
+
+    <div class="board">
+      <div class="tries" id="try1">
+    
+        <div class="validation">
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+        </div>
+        <button class="circle_try" id="1"></button>
+        <button class="circle_try" id="2"></button>
+        <button class="circle_try" id="3"></button>
+        <button class="circle_try" id="4"></button>
+
+        <button class ="clear">C</button>
+
+      </div>
+
+      <div class="tries" id="try2">
+        <div class="validation">
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+        </div>
+        <button class="circle_try" id="1"></button>
+        <button class="circle_try" id="2"></button>
+        <button class="circle_try" id="3"></button>
+        <button class="circle_try" id="4"></button>
+
+        <button class ="clear">C</button>
+
+      </div>
+    
+      <div class="tries" id="try3">
+        <div class="validation">
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+        </div>
+        <button class="circle_try" id="0"></button>
+        <button class="circle_try" id="1"></button>
+        <button class="circle_try" id="2"></button>
+        <button class="circle_try" id="3"></button>
+
+        <button class ="clear">C</button>
+
+      </div>
+    
+      <div class="tries" id="try4">
+        <div class="validation">
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+        </div>
+        <button class="circle_try" id="0"></button>
+        <button class="circle_try" id="1"></button>
+        <button class="circle_try" id="2"></button>
+        <button class="circle_try" id="3"></button>
+
+        <button class ="clear">C</button>
+
+      </div>
+
+      <div class="tries" id="try5">
+        <div class="validation">
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+        </div>
+        <button class="circle_try" id="0"></button>
+        <button class="circle_try" id="1"></button>
+        <button class="circle_try" id="2"></button>
+        <button class="circle_try" id="3"></button>
+
+        <button class ="clear">C</button>
+
+      </div>
+
+      <div class="tries" id="try6">
+        <div class="validation">
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+        </div>
+        <button class="circle_try" id="0"></button>
+        <button class="circle_try" id="1"></button>
+        <button class="circle_try" id="2"></button>
+        <button class="circle_try" id="3"></button>
+
+        <button class ="clear">C</button>
+
+      </div>
+
+      <div class="tries" id="try7">
+        <div class="validation">
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+        </div>
+        <button class="circle_try" id="0"></button>
+        <button class="circle_try" id="1"></button>
+        <button class="circle_try" id="2"></button>
+        <button class="circle_try" id="3"></button>
+
+        <button class ="clear">C</button>
+
+      </div>
+
+      <div class="tries" id="try8">
+        <div class="validation">
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+          <div class="bubble_valid"></div>
+        </div>
+        <button class="circle_try" id="0"></button>
+        <button class="circle_try" id="1"></button>
+        <button class="circle_try" id="2"></button>
+        <button class="circle_try" id="3"></button>
+
+        <button class ="clear">C</button>
+        
+      </div>
+
+      <div class="tries" id="try9" style="display: none;">
+      </div>
+    </div>
+    <button id = "validbutton" >validation</button>
+    
+    <div class = "colors_control">
+      <button class = "circle" id ="red" ></button>
+      <button class = "circle" id = "blue"></button>
+      <button class = "circle" id = "green"></button>
+      <button class = "circle" id = "black"></button>
+      <button class = "circle" id = "purple"></button>
+      <button class = "circle" id = "orange"></button>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
