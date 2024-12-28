@@ -1,6 +1,6 @@
+title: Lucas Meira Rolo
+description: I am a software engineering student, and this portfolio showcases a selection of my projects, highlighting my skills and expertise in the field of informatics. 
+show_downloads: false
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
-title: [Portfolio]
-description: [This is the portfolio how present all my projects.]
-
